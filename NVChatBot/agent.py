@@ -1,6 +1,10 @@
 from google.adk import Agent
+from pathlib import Path
 
-with open("E:\\ORGANIZATION DEVELOPMENT\\NEX VITALS\\NexVitalsSupport\\NexVitalsSupportMicroServices\\NVChatBot\\instruction.txt", "r", encoding="utf-8") as f:
+
+instruction_path = Path(__file__).parent / "instruction.txt"
+
+with open(instruction_path, "r", encoding="utf-8") as f:
     instruction_text = f.read()
 
 root_agent = Agent(
