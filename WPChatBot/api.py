@@ -22,12 +22,12 @@ from google.genai import types
 from google.adk.runners import Runner
 from google.adk.sessions.in_memory_session_service import InMemorySessionService
 
-from NVChatBot.agent import root_agent
+from WPChatBot.agent import root_agent
 
 # ---------------------------------------------------
 # FastAPI App
 # ---------------------------------------------------
-app = FastAPI(title="NexVitals AI API")
+app = FastAPI(title="WavePoint AI API")
 
 
 # ---------------------------------------------------
@@ -47,7 +47,7 @@ session_service = InMemorySessionService()
 # ADK Runner
 # ---------------------------------------------------
 runner = Runner(
-    app_name="NVChatBot",
+    app_name="WPChatBot",
     agent=root_agent,
     session_service=session_service,
     auto_create_session=True
@@ -60,7 +60,7 @@ runner = Runner(
 @app.get("/")
 def home():
     return {
-        "status": "NexVitals AI API Running"
+        "status": "WavePoint AI API Running"
     }
 
 
