@@ -76,7 +76,7 @@ flowchart TD
 ```
 CustSupMicroService/
 │
-├── NVChatBot/                    # Core microservice package
+├── WPChatBot/                    # Core microservice package
 │   ├── __init__.py               # Package initialization
 │   ├── agent.py                  # ADK Agent configuration & logic
 │   ├── api.py                    # FastAPI endpoints & request handlers
@@ -134,7 +134,7 @@ The API will be available at `http://localhost:8000`
 
 ### Support Agent Instructions
 
-The support agent's behavior is defined in `NVChatBot/instruction.txt`. This file contains:
+The support agent's behavior is defined in `WPChatBot/instruction.txt`. This file contains:
 
 - **Scope definitions** : What topics are within Wavepoint's domain
 - **Response guidelines** : How to structure helpful answers
